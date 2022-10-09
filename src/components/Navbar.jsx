@@ -1,4 +1,4 @@
-import { FaTree, FaSearch } from 'react-icons/fa';
+import { FaTree, FaSearch } from 'react-icons/fa/index';
 
 const Navbar = () => {
   return (

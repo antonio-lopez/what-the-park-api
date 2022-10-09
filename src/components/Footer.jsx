@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaGlobeAmericas } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaGlobeAmericas } from 'react-icons/fa/index';
 
 const Footer = () => {
   return (

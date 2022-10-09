@@ -1,4 +1,4 @@
-import { FaMapMarkerAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt } from 'react-icons/fa/index';
 
 const Card = () => {
   return (
