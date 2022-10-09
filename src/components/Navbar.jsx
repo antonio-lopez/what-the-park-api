@@ -9,7 +9,7 @@ const Navbar = () => {
           <a className='pr-3 text-softWhite' href='/'>
             What The Park?
           </a>
-          <a className='text-red' href='/'>
+          <a className='text-red' href='/about'>
             About
           </a>
         </div>
