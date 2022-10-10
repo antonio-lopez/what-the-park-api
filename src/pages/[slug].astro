@@ -1,0 +1,54 @@
+---
+export function getStaticPaths() {
+  return [{ params: { slug: 'park' } }];
+}
+
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button';
+---
+
+<Layout title='Park'>
+  <section
+    class='min-h-main bg-[url("/images/park-sample.jpg")] bg-cover bg-no-repeat bg-center'
+  >
+    <div class='bg-black/70'>
+      <div class='layout py-8'>
+        <div class='ring ring-white min-h-main'>
+          <div class='text-softWhite space-y-3 p-3'>
+            <h1 class='text-xl font-bold pt-7'>
+              Abraham Lincoln Birthplace National Historical Park
+            </h1>
+            <p class='text-sm'>
+              "For over a century people from around the world have come to
+              rural Central Kentucky to honor the humble beginnings of our 16th
+              president, Abraham Lincoln. His early life on Kentucky's frontier
+              shaped his character and prepared him to lead the nation through
+              Civil War. Visit our country's first memorial to Lincoln, built
+              with donations from young and old, and the site of his childhood
+              home."
+            </p>
+            <div class='space-x-3 text-sm py-4'>
+              <Button name='Website' />
+              <Button name='Directions' />
+            </div>
+            <div class='flex flex-col text-sm'>
+              <span>2995 Lincoln Farm Road</span>
+              <span>Hodgenville, KY 42748</span>
+            </div>
+            <p class='text-sm'>907-644-3472</p>
+            <p class='text-sm'>rachel_mason@nps.gov</p>
+            <ol class='text-sm'>
+              <li>Sunday: 9am-5pm</li>
+              <li>Monday: 9am-5pm</li>
+              <li>Tuesday: 9am-5pm</li>
+              <li>Wednesday: 9am-5pm</li>
+              <li>Thursday: 9am-5pm</li>
+              <li>Friday: 9am-5pm</li>
+              <li>Saturday: 9am-5pm</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
