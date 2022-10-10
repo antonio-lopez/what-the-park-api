@@ -1,8 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Park from '../components/Park';
+
+const response = await fetch(
+  'https://developer.nps.gov/api/v1/parks?limit=20&api_key=YOYeLTZhyVLHKEn3uhgiGFCswEcdLSmmK632Pocw'
+);
+const parks = await response.json();
 ---
 
 <Layout title='What The Park'>
-  <Park />
+  <Park parks={parks} />
 </Layout>

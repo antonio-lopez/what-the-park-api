@@ -1,20 +1,25 @@
-import { FaMapMarkerAlt } from 'react-icons/fa/index';
+import { BsBoxArrowUpRight } from 'react-icons/bs/index';
 
-const Card = () => {
+const Card = ({ park }) => {
   return (
     <div className='relative shadow-2xl'>
       {/* text box */}
       <div className='absolute bottom-0 w-full p-1 text-xs'>
-        <div className='bg-white p-0.5'>
-          <h1>Abraham Lincoln Birthplace</h1>
-          <div className='flex justify-end'>
-            <FaMapMarkerAlt className='h-3 w-3 text-black' />
-            <span>KY</span>
+        <div className='h-14 bg-white p-0.5'>
+          <div className='flex h-full flex-col justify-between'>
+            <h1>{park.name}</h1>
+            <div className='flex justify-end'>
+              <BsBoxArrowUpRight className='h-3 w-3' />
+            </div>
           </div>
         </div>
       </div>
       {/* image */}
-      <img src='/images/park-sample.jpg' alt='park cover' />
+      <img
+        className='h-40 w-full object-cover'
+        src={park.images[0].url}
+        alt='park cover'
+      />
     </div>
   );
 };
