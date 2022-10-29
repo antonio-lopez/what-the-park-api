@@ -4,11 +4,10 @@ import Park from '../components/Park';
 
 const response = await fetch(
   `https://developer.nps.gov/api/v1/parks?limit=5&api_key=${
-    import.meta.env.PUBLIC_API_KEY
+    import.meta.env.PUBLIC_VERCEL_ENV
   }`
 );
 const { data } = await response.json();
-console.log(data);
 ---
 
 <Layout title='What The Park'>
