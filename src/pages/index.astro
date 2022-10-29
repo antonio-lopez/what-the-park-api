@@ -3,13 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import Park from '../components/Park';
 
 const response = await fetch(
-  `https://developer.nps.gov/api/v1/parks?limit=20&api_key=${
+  `https://developer.nps.gov/api/v1/parks?limit=5&api_key=${
     import.meta.env.PUBLIC_API_KEY
   }`
 );
-const parks = await response.json();
+const { data } = await response.json();
+console.log(data);
 ---
 
 <Layout title='What The Park'>
-  <Park parks={parks} />
+  <Park parks={data} />
 </Layout>
